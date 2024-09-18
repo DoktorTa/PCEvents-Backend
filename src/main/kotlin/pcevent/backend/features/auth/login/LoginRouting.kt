@@ -1,4 +1,4 @@
-package com.example.features.auth.login
+package pcevent.backend.features.auth.login
 
 import com.example.cashe.MemoryCashe
 import com.example.cashe.TokenCashe
@@ -12,12 +12,12 @@ import java.util.UUID
 fun Application.configureLoginRouting() {
     routing {
         post("/login") {
-            val receive = call.receive<LoginReceive>()
+            val receive = call.receive<pcevent.backend.features.auth.login.LoginReceive>()
             if (MemoryCashe.userList.map { it.login }.contains(receive.login)) {
                 if (MemoryCashe.userList.map { it.password }.contains(receive.password)) {
                     val token = UUID.randomUUID().toString()
                     MemoryCashe.tokensUsers.add(TokenCashe(login = receive.login, token))
-                    call.respond(HttpStatusCode.OK, LoginResponse(token))
+                    call.respond(HttpStatusCode.OK, pcevent.backend.features.auth.login.LoginResponse(token))
                     return@post
                 } else {
                     call.respond(HttpStatusCode.Conflict, "Incorrect password")

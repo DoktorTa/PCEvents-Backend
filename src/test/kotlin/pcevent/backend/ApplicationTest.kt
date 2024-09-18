@@ -1,4 +1,4 @@
-package com.example
+package pcevent.backend
 
 import com.example.plugins.*
 import io.ktor.client.request.*

@@ -1,4 +1,4 @@
-package com.example
+package pcevent.backend
 
 import com.example.features.auth.login.configureLoginRouting
 import com.example.features.auth.register.configureRegisterRouting

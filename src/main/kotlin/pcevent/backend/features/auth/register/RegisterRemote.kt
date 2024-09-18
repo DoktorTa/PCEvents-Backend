@@ -1,4 +1,4 @@
-package com.example.features.auth.register
+package pcevent.backend.features.auth.register
 
 import kotlinx.serialization.Serializable
 
@@ -11,6 +11,7 @@ data class RegisterRequest(
 
 @Serializable
 data class RegisterResponse(
-    val accessToken: String,
-    val refreshToken: String,
+    val status: String?,
+    val accessToken: String?,
+    val refreshToken: String?,
 )

@@ -1,4 +1,4 @@
-package com.example.features.auth.login
+package pcevent.backend.features.auth.login
 
 import kotlinx.serialization.Serializable
 
@@ -9,6 +9,13 @@ data class LoginReceive(
 )
 
 @Serializable
-data class LoginResponse(
-    val token: String
+data class RefreshTokenRequests (
+    val refreshToken: String?
+)
+
+
+@Serializable
+data class RegisterResponse(
+    val accessToken: String?,
+    val refreshToken: String?,
 )
