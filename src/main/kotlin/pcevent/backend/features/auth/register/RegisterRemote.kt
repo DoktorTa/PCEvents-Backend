@@ -1,9 +1,9 @@
-package com.example.features.register
+package com.example.features.auth.register
 
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class RegisterReseive(
+data class RegisterRequest(
     val login: String,
     val email: String,
     val password: String
@@ -11,5 +11,6 @@ data class RegisterReseive(
 
 @Serializable
 data class RegisterResponse(
-    val token: String
+    val accessToken: String,
+    val refreshToken: String,
 )

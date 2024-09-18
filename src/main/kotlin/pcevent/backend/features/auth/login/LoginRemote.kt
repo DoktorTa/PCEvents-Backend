@@ -1,4 +1,4 @@
-package com.example.features.login
+package com.example.features.auth.login
 
 import kotlinx.serialization.Serializable
 

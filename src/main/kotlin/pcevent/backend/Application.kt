@@ -1,7 +1,7 @@
 package com.example
 
-import com.example.features.login.configureLoginRouting
-import com.example.features.register.configureRegisterRouting
+import com.example.features.auth.login.configureLoginRouting
+import com.example.features.auth.register.configureRegisterRouting
 import com.example.plugins.*
 import io.ktor.server.application.*
 import io.ktor.server.cio.*

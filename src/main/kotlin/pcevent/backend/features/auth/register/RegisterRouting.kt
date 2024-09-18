@@ -1,4 +1,4 @@
-package com.example.features.register
+package com.example.features.auth.register
 
 import com.example.cashe.MemoryCashe
 import com.example.cashe.TokenCashe
