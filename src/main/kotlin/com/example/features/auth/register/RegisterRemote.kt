@@ -13,5 +13,5 @@ data class RegisterRequest(
 data class RegisterResponse(
     val status: String?,
     val accessToken: String?,
-    val refreshToken: String?,
+    val refreshToken: String?
 )
