@@ -1,8 +1,8 @@
-package com.example.features.auth.login
+package com.example.auth.login
 
 
-import com.example.features.auth.jwt.JwtConfig
-import com.example.features.auth.register.RegisterResponse
+import com.example.auth.jwt.JwtConfig
+import com.example.auth.register.RegisterResponse
 
 class Login {
     private val logRepo = LoginRepository()

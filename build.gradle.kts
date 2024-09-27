@@ -1,4 +1,3 @@
-
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
@@ -17,6 +16,7 @@ application {
 
 repositories {
     mavenCentral()
+    maven { url = uri("https://jitpack.io") }
 }
 
 dependencies {
@@ -29,10 +29,13 @@ dependencies {
     implementation(libs.ktor.server.config.yaml)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+
     implementation("io.ktor:ktor-server-auth:2.3.2")
     implementation("io.ktor:ktor-server-auth-jwt:2.3.2")
     implementation("com.auth0:java-jwt:4.3.0")
+
     implementation("io.ktor:ktor-server-content-negotiation:2.3.12")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.12")
 
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 }
