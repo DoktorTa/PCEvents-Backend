@@ -13,7 +13,6 @@ object JwtConfig {
     private const val WEEK: Int = 7 * 24 * 60 * 60 * 1000 // тут int все норм
 
     fun generateAccessToken(userId: String): String {
-        println(3)
         return JWT.create()
             .withIssuer("pc-event")  // ENV
             .withClaim("userId", userId)

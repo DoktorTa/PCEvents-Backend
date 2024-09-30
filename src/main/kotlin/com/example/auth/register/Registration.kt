@@ -21,7 +21,6 @@ class Registration {
         if (!registerRequest.password.isValidPassword()) {
             return RegisterResponse(status = "Password incorrect", accessToken = null, refreshToken = null)
         }
-        println(2)
 
         // TODO: Код который ложит нового юзера в бд.
 
