@@ -2,6 +2,7 @@
 plugins {
     alias(libs.plugins.kotlin.jvm)
     alias(libs.plugins.ktor)
+    id("com.palantir.docker") version "0.35.0"
 }
 
 group = "com.example"
@@ -28,4 +29,10 @@ dependencies {
     implementation(libs.ktor.server.config.yaml)
     testImplementation(libs.ktor.server.test.host)
     testImplementation(libs.kotlin.test.junit)
+}
+
+docker {
+    name = "${project.group}/${project.name}:${project.version}"
+    files("build/libs/pc-event.backend-0.0.1.jar")
+    buildArgs(mapOf("JAR_FILE" to "pc-event.backend-0.0.1.jar"))
 }
